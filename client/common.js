@@ -1,17 +1,21 @@
-  Meteor.startup(function () {
-    AccountsEntry.config({
+Meteor.subscribe('Posts');
+Meteor.subscribe('ProfileImages');
+Meteor.subscribe('UserImages');
 
-      homeRoute: '/',
-      dashboardRoute: '/',
-      passwordSignupFields: 'USERNAME_AND_EMAIL'
-    });
+Meteor.startup(function () {
+  AccountsEntry.config({
 
-    Accounts.ui.config({
-      passwordSignupFields: 'USERNAME_AND_EMAIL'
-    });
+    homeRoute: '/',
+    dashboardRoute: '/',
+    passwordSignupFields: 'USERNAME_AND_EMAIL'
   });
 
-  Template.registerHelper('getProfileImg', function(userId){
-    var imgUrl = UserImages.findOne({userId: userId}).image;
-    return imgUrl;
+  Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_AND_EMAIL'
   });
+});
+
+Template.registerHelper('getProfileImg', function(userId){
+  var imgUrl = UserImages.findOne({userId: userId}).image;
+  return imgUrl;
+});

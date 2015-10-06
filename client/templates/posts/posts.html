@@ -16,7 +16,9 @@
 	      </div>
 	      <div class="modal-body">
 	        {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
-		        {{> afQuickField name="body" rows=4}}
+	        	<fieldset>
+	        		{{> afQuickField name="body" rows=4}}
+        		</fieldset>
 		        <button type="submit" class="btn btn-primary">Send</button>
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	        {{/autoForm}}
