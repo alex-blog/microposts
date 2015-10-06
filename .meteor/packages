@@ -29,3 +29,7 @@ check
 accounts-ui
 accounts-password
 joshowens:accounts-entry-1.2
+cfs:standard-packages
+cfs:gridfs
+aldeed:collection2
+aldeed:autoform
