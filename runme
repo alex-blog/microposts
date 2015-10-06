@@ -1,0 +1,12 @@
+meteor add iron:router
+meteor add twbs:bootstrap
+meteor add logging
+meteor add reload
+meteor add random
+meteor add ejson
+meteor add spacebars
+meteor add check
+
+meteor add accounts-ui accounts-password
+#meteor add joshowens:accounts-entry
+meteor add joshowens:accounts-entry-1.2
